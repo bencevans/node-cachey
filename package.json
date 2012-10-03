@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git://github.com/bencevans/cachey.git"
   },
+  "bugs": {
+    "url": "http://github.com/bencevans/cachey/issues"
+  },
   "keywords": [
     "cache",
     "redis"
