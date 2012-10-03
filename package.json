@@ -1,0 +1,25 @@
+{
+  "name": "cachey",
+  "version": "0.0.1",
+  "description": "Redis Based Cache Facilitator",
+  "main": "index.js",
+  "dependencies": {
+    "redis": "~0.8.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.6.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bencevans/cachey.git"
+  },
+  "keywords": [
+    "cache",
+    "redis"
+  ],
+  "author": "Ben Evans",
+  "license": "BSD"
+}
