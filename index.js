@@ -13,13 +13,13 @@ function createCachey (config) {
 	if(typeof config.redisClient == "undefined")
 		throw "You've not provided a redisClient instance";
 
-	return new cachey(config)
+	return new cachey(config);
 
 }
 
 var cachey = function (config) {
-	this.preKey = config.preKey;
-	this.redisClient = config.redisClient;
+	this.preKey = config.preKey || 'cachey:';
+	this.redisClient = config.redisClient || config;
 	return this;
 }
 
