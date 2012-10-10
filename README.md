@@ -6,6 +6,10 @@ Redis Backed Cache for Node.JS
 
     npm install cachey
 
+##Caveat
+
+Due to [Redis](http://redis.io) not supporting Objects you have to save data as a String so JSON.stringify to the rescue! Then JSON.parse when retrieving data from cachey.
+
 ##Usage
 
 1. Create a Redis Client Instance
