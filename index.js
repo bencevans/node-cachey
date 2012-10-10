@@ -21,7 +21,7 @@ var cachey = function (config) {
 	this.preKey = config.preKey || 'cachey:';
 	this.redisClient = config.redisClient || config;
 	return this;
-}
+};
 
 cachey.prototype.cache = function (key, ttl, getDataFunction, returnDataFunction) {
 	var self = this;
@@ -39,7 +39,7 @@ cachey.prototype.cache = function (key, ttl, getDataFunction, returnDataFunction
 
 			// Save Data to DB
 			self.redisClient.set(self.preKey + key, data, function (err) {
-				if(err) return returnDataFunction(err)
+				if(err) return returnDataFunction(err);
 
 				// Set it to Expire with ttl provided
 				self.redisClient.expire(self.preKey + key, ttl, function(err) {
@@ -48,8 +48,8 @@ cachey.prototype.cache = function (key, ttl, getDataFunction, returnDataFunction
 			});
 		});
 	});
-}
+};
 
 cachey.prototype.flush = function (key, callback) {
 	this.redisClient.del(this.preKey, callback);
-}
+};
