@@ -1,4 +1,4 @@
-#Cachey
+#Cachey ![Travis Build Status](https://secure.travis-ci.org/bencevans/cachey.png)
 
 Redis Backed Cache for Node.JS
 
