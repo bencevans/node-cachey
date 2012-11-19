@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bencevans/cachey.git"
+    "url": "git://github.com/bencevans/node-cachey.git"
   },
   "bugs": {
-    "url": "http://github.com/bencevans/cachey/issues"
+    "url": "http://github.com/bencevans/node-cachey/issues"
   },
   "keywords": [
     "cache",
