@@ -4,7 +4,9 @@ Redis Backed Cache for Node.JS
 
 ##Install
 
-    npm install cachey
+```bash
+npm install cachey
+```
 
 ##Caveat
 
@@ -14,15 +16,21 @@ Due to [Redis](http://redis.io) not supporting Objects you have to save data as 
 
 1. Create a Redis Client Instance
 
-    	var redis = require('redis').createClient();
+    ```javascript
+    var redis = require('redis').createClient();
+    ```
 
 2. Require Cachey & Parse in the redis instance
 
-    	var cache = require('cachey')(redis);
+    ```javascript
+    var cache = require('cachey')(redis);
+    ```
 
 3. Start Caching
 
-    	cache.cache(key, ttl, getDataFunction, returnDataFunction)
+    ```javascript
+    cache.cache(key, ttl, getDataFunction, returnDataFunction)
+    ```
 	
 	Parameters:
 
@@ -41,8 +49,8 @@ Look at ./test.js
 
 ##Links
 
-* [GitHub Repo](https://github.com/bencevans/cachey)
-* [Issue Tracker](https://github.com/bencevans/cachey/issues)
+* [GitHub Repo](https://github.com/bencevans/node-cachey)
+* [Issue Tracker](https://github.com/bencevans/node-cachey/issues)
 
 ##Licence
 
