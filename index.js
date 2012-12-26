@@ -1,4 +1,5 @@
 var fs = require("fs");
+var async = require('async');
 
 exports = module.exports = createCachey;
 
@@ -51,5 +52,19 @@ cachey.prototype.cache = function (key, ttl, getDataFunction, returnDataFunction
 };
 
 cachey.prototype.flush = function (key, callback) {
-	this.redisClient.del(this.preKey, callback);
+	var self = this;
+
+	if(typeof callback == 'undefined') {
+		callback = key;
+		key = '*';
+	}
+	this.redisClient.keys(this.preKey + key + '*', function(err, keys) {
+		async.map(keys, function(key, cb) {
+			self.redisClient.del(this.preKey + key, cb);
+		}, function(err, ress) {
+			if(err) return callback(err);
+			return callback(null, true);
+		});
+	});
+
 };

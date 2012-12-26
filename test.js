@@ -19,7 +19,7 @@ describe("Cachey", function(){
 
 			cachey.cache('hello', 4, function(callback){
 				executed++;
-				callback(null, "world2")
+				callback(null, "world2");
 			}, function(err, data) {
 				assert.equal(1, executed);
 				assert.equal("world", data);
@@ -41,6 +41,23 @@ describe("Cachey", function(){
 			done();
 		});
 
+	});
+
+	it("should flush a key", function (done) {
+
+		this.timeout(5000);
+
+		cachey.cache('tmp', 60, function(cb){
+			cb(null, 'yo');
+		}, function(err, data) {
+			//assert(null, err);
+			assert('yo', data);
+			cachey.flush(function(err, ok){
+				assert.equal(null, err);
+				assert.equal(true, ok);
+				done();
+			});
+		});
 	});
 
 });
