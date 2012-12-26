@@ -23,7 +23,7 @@ Due to [Redis](http://redis.io) not supporting Objects you have to save data as 
 2. Require Cachey & Parse in the redis instance
 
     ```javascript
-    var cache = require('cachey')(redis);
+    var cache = require('cachey')({redisClient:redis});
     ```
 
 3. Start Caching
