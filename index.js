@@ -31,12 +31,26 @@ cachey.prototype.cache = function (key, ttl, getDataFunction, returnDataFunction
   self.redisClient.get(self.preKey + key, function (err, data) {
     if(err) return returnDataFunction(err);
 
+    if(data) {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        return returnDataFunction(e);
+      }
+    }
+
     // Data Exists? Return That!
     if(data !== null) return returnDataFunction(null, data);
 
     // Get Data from Function
     getDataFunction(function(err, data) {
       if(err) return returnDataFunction(err);
+
+      try {
+        data = JSON.stringify(data);
+      } catch (e) {
+        return returnDataFunction(e);
+      }
 
       // Save Data to DB
       self.redisClient.set(self.preKey + key, data, function (err) {
