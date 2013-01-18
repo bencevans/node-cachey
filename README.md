@@ -49,21 +49,21 @@ npm install cachey
 
 ### Flushing a Key
 
-    ```javascript
-    cachey.flush('beep', function(err, flushed) {
-      if(err) throw err;
-      console.log('beep was flushed away');
-    });
-    ```
+```javascript
+cachey.flush('beep', function(err, flushed) {
+  if(err) throw err;
+  console.log('beep was flushed away');
+});
+```
 
 ### Flushing all Keys
 
-    ```javascript
-    cachey.flush(function(err, flushed) {
-      if(err) throw err;
-      console.log('all keys were flushed');
-    });
-    ```
+```javascript
+cachey.flush(function(err, flushed) {
+  if(err) throw err;
+  console.log('all keys were flushed');
+});
+```
 
 ##Testing
 
