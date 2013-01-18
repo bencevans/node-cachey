@@ -8,6 +8,7 @@ Redis Backed Cache for Node.JS
 * Key/Value Cache
 * Flush a key
 * Flush all keys
+* JSON stringify and parse for storing Objects in Redis
 
 ##Install
 
