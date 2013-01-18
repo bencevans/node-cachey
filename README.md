@@ -2,15 +2,18 @@
 
 Redis Backed Cache for Node.JS
 
+# Features
+
+* Asynchronous
+* Key/Value Cache
+* Flush a key
+* Flush all keys
+
 ##Install
 
 ```bash
 npm install cachey
 ```
-
-##Caveat
-
-Due to [Redis](http://redis.io) not supporting Objects you have to save data as a String so JSON.stringify to the rescue! Then JSON.parse when retrieving data from cachey.
 
 ##Usage
 
@@ -23,25 +26,43 @@ Due to [Redis](http://redis.io) not supporting Objects you have to save data as 
 2. Require Cachey & Parse in the redis instance
 
     ```javascript
-    var cache = require('cachey')({redisClient:redis});
+    var cachey = require('cachey')({redisClient:redis});
     ```
 
 3. Start Caching
 
     ```javascript
-    cache.cache(key, ttl, getDataFunction, returnDataFunction)
+    cachey.cache(key, ttl, getDataFunction, returnDataFunction)
     ```
-	
-	Parameters:
 
-	1. key - String - Unique Id for the data your caching
-	* ttl - Number - Time (in Seconds) you want to cache data for
-	* getDataFunction - Function - The first parameter parsed is a callback with the structure callback(err, data)
-	* return DataFunction - Function - Callback that errors, then data.
+    Parameters:
 
-##Example
+    1. key - String - Unique Id for the data your caching
+    * ttl - Number - Time (in Seconds) you want to cache data for
+    * getDataFunction - Function - The first parameter parsed is a callback with the structure callback(err, data)
+    * return DataFunction - Function - Callback that errors, then data.
 
-Look at ./test.js
+
+
+##Examples
+
+### Flushing a Key
+
+    ```javascript
+    cachey.flush('beep', function(err, flushed) {
+      if(err) throw err;
+      console.log('beep was flushed away');
+    });
+    ```
+
+### Flushing all Keys
+
+    ```javascript
+    cachey.flush(function(err, flushed) {
+      if(err) throw err;
+      console.log('all keys were flushed');
+    });
+    ```
 
 ##Testing
 
