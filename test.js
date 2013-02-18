@@ -60,5 +60,25 @@ describe("Cachey", function(){
     });
   });
 
+  it("should return same data type of cached & just got return data", function(done) {
+
+    function runCache(cb) {
+      cachey.cache('cache_temp_datetype', 120, function(cb) {
+        cb(null, {hello:'world'});
+      }, cb);
+    }
+
+    runCache(function(err, data) {
+        assert.ifError(err);
+        assert.equal(typeof data, 'object');
+        runCache(function(err, data) {
+          assert.ifError(err);
+          assert.equal(typeof data, 'object');
+          done();
+        });
+    });
+    
+  });
+
 });
 
