@@ -4,6 +4,7 @@ Redis Backed Cache for Node.JS
 
 [![Travis Build Status](https://secure.travis-ci.org/bencevans/node-cachey.png)](https://travis-ci.org/bencevans/node-cachey)
 [![Coverage Status](https://coveralls.io/repos/bencevans/node-cachey/badge.png?branch=master)](https://coveralls.io/r/bencevans/node-cachey?branch=master)
+[![Dependency Status](https://david-dm.org/bencevans/node-cachey.png)](https://david-dm.org/bencevans/node-cachey)
 
 # Features
 
