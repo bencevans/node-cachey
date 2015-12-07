@@ -4,7 +4,7 @@
   "description": "Redis Based Cache Facilitator",
   "main": "index.js",
   "dependencies": {
-    "redis": "~0.9.0",
+    "redis": "~2.4.1",
     "async": "~0.2.9"
   },
   "devDependencies": {
