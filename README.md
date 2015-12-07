@@ -1,12 +1,8 @@
-#Cachey
+# Cachey [![Travis Build Status](https://img.shields.io/travis/bencevans/node-cachey.svg?style=flat-square)](https://travis-ci.org/bencevans/node-cachey) [![Coverage Status](https://img.shields.io/coveralls/bencevans/node-cachey.svg?style=flat-square)](https://coveralls.io/r/bencevans/node-cachey?branch=master) [![Dependency Status](https://img.shields.io/david/bencevans/node-cachey.svg?style=flat-square)](https://david-dm.org/bencevans/node-cachey)
 
-Redis Backed Cache for Node.JS
+> Redis Backed Cache for Node.JS
 
-[![Travis Build Status](https://secure.travis-ci.org/bencevans/node-cachey.png)](https://travis-ci.org/bencevans/node-cachey)
-[![Coverage Status](https://coveralls.io/repos/bencevans/node-cachey/badge.png?branch=master)](https://coveralls.io/r/bencevans/node-cachey?branch=master)
-[![Dependency Status](https://david-dm.org/bencevans/node-cachey.png)](https://david-dm.org/bencevans/node-cachey)
-
-# Features
+## Features
 
 * Asynchronous
 * Key/Value Cache
@@ -14,13 +10,11 @@ Redis Backed Cache for Node.JS
 * Flush all keys
 * JSON stringify and parse for storing Objects in Redis
 
-##Install
+## Install
 
-```bash
-npm install cachey
-```
+    $ npm install cachey
 
-##Usage
+## Usage
 
 1. Create a Redis Client Instance
 
@@ -49,7 +43,7 @@ npm install cachey
 
 
 
-##Examples
+## Examples
 
 ### Flushing a Key
 
@@ -71,21 +65,13 @@ cachey.flush(function(err, flushed) {
 
 ##Testing
 
-`npm test`
+    $ npm test
 
 ##Links
 
 * [GitHub Repo](https://github.com/bencevans/node-cachey)
 * [Issue Tracker](https://github.com/bencevans/node-cachey/issues)
 
-##Licence
+## Licence
 
-(The MIT Licence)
-
-Copyright (c) 2012 Ben Evans &lt;ben@bensbit.co.uk&gt;
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT © [Ben Evans](http://bensbit.co.uk)
