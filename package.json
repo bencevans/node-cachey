@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "redis": "~2.4.2",
-    "async": "~0.2.9"
+    "async": "~1.5.1"
   },
   "devDependencies": {
     "mocha": "~1.14.0",
