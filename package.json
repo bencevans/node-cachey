@@ -1,8 +1,8 @@
 {
   "name": "cachey",
   "version": "0.3.2",
-  "description": "Redis Based Cache Facilitator",
-  "main": "index.js",
+  "description": "Redis backed cache facilitator",
+  "main": "src/index.js",
   "dependencies": {
     "async": "^2.6.0",
     "redis": "^2.8.0"
@@ -13,8 +13,8 @@
     "mocha": "5.1.1"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec test.js",
-    "travis-test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage"
+    "test": "./node_modules/mocha/bin/mocha -R spec src/test.js",
+    "travis-test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec src/test && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
