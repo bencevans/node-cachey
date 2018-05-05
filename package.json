@@ -8,9 +8,9 @@
     "async": "~1.5.1"
   },
   "devDependencies": {
-    "mocha": "~1.14.0",
-    "istanbul": "~0.4.1",
-    "coveralls": "~2.11.6"
+    "mocha": "1.14.0",
+    "istanbul": "0.4.5",
+    "coveralls": "2.11.16"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -R spec test.js",
