@@ -3,6 +3,9 @@ var assert = require("assert");
 var redisClient = require('redis').createClient();
 var cachey = require('./')({redisClient:redisClient});
 
+after(() => {
+  redisClient.quit()
+})
 
 describe("Cachey", function(){
 
